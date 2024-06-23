@@ -58,7 +58,7 @@
                 <button @click="category = 'minuman'" class="btn btn-primary rounded-3 text-white me-2">Kategori
                     minuman</button>
             </div>
-            <div class="row row-cols-1 row-cols-md-4 row-cols-sm-6 gx-0 gy-0 " id="">  
+            <div class="row row-cols-1 row-cols-md-4 row-cols-sm-6 " id="">  
                 <template x-for="(item, index) in filteredItems" :key="index" class="">
                     <div class="col-6 col-md-4 col-lg-3 mb-2">
                         <div class="card">
@@ -77,10 +77,10 @@
                                     class="input-group d-flex tomboljumlah justify-content-center">
                                     <span class="input-group-text rounded-3 text-warning bg-">Jumlah</span>
                                     <button @click.prevent="count++; $store.cart.add(item)"
-                                        class="btn btn-outline-secondary" type="button">+</button>
+                                        class="btn " type="button">+</button>
                                     <input type="number" class="form-control text-center" :value="count" readonly>
                                     <button @click.prevent="if (count > 0) { count--; $store.cart.remove(item) }"
-                                        class="btn btn-outline-secondary" type="button">-</button>
+                                        class="btn" type="button">-</button>
                                 </div>
                             </div>
                         </div>
@@ -148,7 +148,7 @@
                                 x-model="form.alamat" required></textarea>
                         </div>
                         <div class="container mb-3" id="selected-items-container" x-data="{ cart: $store.cart }">
-                            <h4 class="text-center pt-4 text-primary">Total Harga: Rp <span x-text="$store.cart.total"></span></h4>
+                            <h4 class="text-center pt-4 ">Total Harga: Rp <span x-text="$store.cart.total"></span></h4>
                             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2">
                                 <template x-for="(item, index) in cart.items" :key="index" class="menu-item">
                                     <div class="col-6 col-md-4 mb-1">
@@ -162,13 +162,13 @@
                                                     Total: Rp <span x-text="item.price * item.quantity"></span>
                                                 </p>
                                                 <div x-data="{ count: item.quantity }"
-                                                    class="input-group d-flex tombol-jumlah-form justify-content-center">
+                                                    class="input-group d-flex tombol-jumlah-form justify-content-center bg-transparent">
                                                     <button @click.prevent="count++; $store.cart.add(item)"
-                                                        class="btn btn-outline-secondary" type="button">+</button>
+                                                        class="btn  btn-form" type="button">+</button>
                                                     <div class="ms-2 me-2"></div>
                                                     <button
                                                         @click.prevent="if (count > 0) { count--; $store.cart.remove(item) }"
-                                                        class="btn btn-outline-primary" type="button">-</button>
+                                                        class="btn  btn-form" type="button">-</button>
                                                 </div>
                                             </div>
                                         </div>

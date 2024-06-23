@@ -208,7 +208,14 @@ body {
   background-color: #ca0585;
   /* Padding untuk memberi ruang di dalam form */
 }
-
+@media (min-width: 769px) {
+  .card .card-body span {
+    width: auto;
+    height: 42px;
+    font-size: 0.9rem;
+    border-radius: 1rem 0 0 1rem;
+  }
+}
 
 /* Style untuk input email dan password */
 .form-container input[type="email"],
@@ -621,5 +628,12 @@ footer .credit a {
   .tombol-jumlah-form {
     /* Menyesuaikan tombol jumlah */
     font-size: 0.8rem;
+  }
+  .card-body .tombol-jumlah-form .btn-form{
+    background-color: transparent;
+    border-color: #010101;
+  }
+  .card-body .tombol-jumlah-form .btn-form:hover{
+    background-color: var(--primary);
   }
 }
