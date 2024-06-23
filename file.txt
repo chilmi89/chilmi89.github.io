@@ -1,0 +1,175 @@
+ <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="mt-2">Mie GakCuan</h1>
+                <p class="lead mt-2">Tempat Terbaik Untuk Minum Mie GakCuan</p>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="assets/mie1.jpg" class="card-img-top" alt="Mie GakCuan">
+                    <div class="card-body">
+                        <h5 class="card-title">Mie GakCuan</h5>
+                        <p class="card-text">Mie yang dibuat dengan bahan-bahan terbaik.</p>
+                        <a href="transaksi.html" class="btn btn-primary">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="assets/mie2.jpg" class="card-img-top" alt="Mie GakCuan">
+                    <div class="card-body">
+                        <h5 class="card-title">Mie Rebus</h5>
+                        <p class="card-text">Mie yang dibuat dengan cara Rebus.</p>
+                        <a href="transaksi.html" class="btn btn-primary">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="assets/mie3.jpg" class="card-img-top" alt="Mie GakCuan">
+                    <div class="card-body">
+                        <h5 class="card-title">Mie Goreng</h5>
+                        <p class="card-text">Mie yang dibuat dengan cara Goreng.</p>
+                        <a href="transaksi.html" class="btn btn-primary">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="card" style="width: 18rem;">
+                <img src="/img/menu/mi mikirin kmu.png" class="card-img-top" alt="Mie Rebus">
+                <div class="card-body">
+                    <h5 class="card-title">Mie Rebus</h5>
+                    <p class="card-text">Mie yang dibuat dengan cara Rebus.</p>
+                    <a href="transaksi.html" class="btn btn-primary">Pesan Sekarang</a>
+                </div>
+
+
+
+     
+
+     <div class="card" style="width: 18rem;">
+                <img src="/img/menu/mi nta kepastian.png" class="card-img-top" alt="Mie Goreng">
+                <div class="card-body">
+                    <h5 class="card-title">Mie Goreng</h5>
+                    <p class="card-text">Mie yang dibuat dengan cara Goreng.</p>
+                    <a href="transaksi.html" class="btn btn-primary">Pesan Sekarang</a>
+                </div>
+            </div>
+
+     <div class="card" style="width: 18rem;">
+                <img src="/img/menu/mi nyaksikanmu.png" class="card-img-top" alt="Mie GakCuan">
+                <div class="card-body">
+                    <h5 class="card-title">Mie GakCuan</h5>
+                    <p class="card-text">Mie yang dibuat dengan bahan-bahan terbaik.</p>
+                    <a href="transaksi.html" class="btn btn-primary">Pesan Sekarang</a>
+                </div>
+            </div>
+
+     <div class="card" style="width: 18rem;">
+                <img src="/img/menu/mi nyayangi kamu.png" class="card-img-top" alt="Mie Rebus">
+                <div class="card-body">
+                    <h5 class="card-title">Mie Rebus</h5>
+                    <p class="card-text">Mie yang dibuat dengan cara Rebus.</p>
+                    <a href="transaksi.html" class="btn btn-primary">Pesan Sekarang</a>
+                </div>
+            </div>
+
+    <div class="card" style="width: 18rem;">
+                <img src="/img/menu/mi gk cuan.png" class="card-img-top" alt="Mie Goreng">
+                <div class="card-body">
+                    <h5 class="card-title">Mie Goreng</h5>
+                    <p class="card-text">Mie yang dibuat dengan cara Goreng.</p>
+                    <a href="transaksi.html" class="btn btn-primary">Pesan Sekarang</a>
+                </div>
+            </div>
+
+
+
+
+
+transaksi.css
+
+.navbar {
+    background-color: #343a40; /* Warna latar belakang navbar */
+    padding: 1rem;
+}
+
+.navbar-logo {
+    color: #ffffff; /* Warna teks logo navbar */
+    font-size: 1.5rem; /* Ukuran teks logo navbar */
+}
+
+.navbar-logo span {
+    font-weight: bold; /* Ketebalan teks logo navbar */
+}
+
+.navbar-nav a {
+    color: #ffffff; /* Warna teks link navbar */
+    margin-right: 1rem; /* Jarak antar link navbar */
+    text-decoration: none; /* Menghapus dekorasi bawaan link */
+}
+
+.navbar-nav a:hover {
+    color: #ffc107; /* Warna teks link navbar saat dihover */
+}
+
+.navbar-extra a {
+    color: #ffffff; /* Warna ikon navbar */
+    margin-right: 1rem; /* Jarak antar ikon navbar */
+    text-decoration: none; /* Menghapus dekorasi bawaan link */
+}
+
+.search-form {
+    position: relative; /* Membuat posisi elemen relatif untuk menyusun elemen lainnya */
+}
+
+#search-box {
+    padding: 0.5rem 2rem 0.5rem 2rem; /* Padding kotak pencarian */
+    border: none; /* Menghapus border kotak pencarian */
+    border-radius: 2rem; /* Membuat sudut kotak pencarian membulat */
+    width: 10rem; /* Lebar kotak pencarian */
+}
+
+#search-box:focus {
+    outline: none; /* Menghapus outline pada focus */
+}
+
+.search-form label {
+    position: absolute; /* Membuat posisi label absolut */
+    top: 50%; /* Menempatkan label di tengah kotak pencarian */
+    left: 0.5rem; /* Jarak kiri label dari kotak pencarian */
+    transform: translateY(-50%); /* Menggeser label ke tengah kotak pencarian secara vertikal */
+    cursor: pointer; /* Menjadikan kursor tangan saat mengarah ke label */
+/* }
+
+.shopping-cart {
+    display: none; /* Menyembunyikan keranjang belanja */
+}
+
+/* Tombol dan ikon belanja dan pencarian */
+#search-button,
+#shopping-cart-button {
+    display: none; /* Menyembunyikan tombol dan ikon belanja dan pencarian */
+} */
+
+/* @media (max-width: 768px) {
+    .navbar-nav {
+        display: none; /* Menyembunyikan daftar navigasi utama pada layar kecil */
+    }
+
+    .navbar-extra a {
+        display: none; /* Menyembunyikan ikon belanja dan pencarian pada layar kecil */
+    }
+
+    #hamburger-menu {
+        display: block; /* Menampilkan tombol hamburger pada layar kecil */
+    }
+} */

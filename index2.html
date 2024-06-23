@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mie GakCuan</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/transaksi.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">KOEDAY<span>HELIOS</span>.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="hamburger-menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link fs-5" href="javascript:void(0)" onclick="goToIndex()">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5" href="transaksi.html#form">Form</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link fs-5" href="#contact">Kontak</a>
+                    </li>
+                    <li class="nav-item me-0">
+                        <a class="nav-link fs-5" href="#paymentModal" data-bs-toggle="modal"
+                            data-bs-target="#paymentModal" id="shopping-cart-button"><i
+                                data-feather="shopping-cart"></i></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content Section -->
+    <section class="products" id="products" x-data="products">
+        <div class="container-lg fluid mt-5 pt-5">
+            <!-- <h2 class="kategori pt-5 mb-5 text-center">Kategori Mie</h2> -->
+            <div class="d-flex mb-5 pt-5 justify-content-center mx-auto">
+                <button type="submit" class="btn btn-primary rounded-3 text-white me-2">Kategori mie</button>
+                <button type="submit" class="btn btn-primary rounded-3 text-white me-2">Kategori seblak</button>
+                <button type="submit" class="btn btn-primary rounded-3 text-white me-2">Kategori minuman</button>
+            </div>
+
+            <div class="container">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="mie-container">
+                    <!-- Cards akan ditambahkan secara dinamis di sini -->
+                    <template x-for="(item , index ) in items " x-key="index">
+                        <div class="col-6 col-md-4 mb-2">
+                            <!-- col-6 untuk mode mobile, col-md-4 untuk tablet, col-lg-4 untuk desktop -->
+                            <div class="card">
+                                <img src="" class="card-img-top" alt="Gambar Mie">
+                                <div class="card-body">
+                                    <h5 class="card-title p-0 m-0"> </h5>
+                                    <p class="card-text p-0 m-0">Harga: Rp </p>
+                                    <div class="d-flex mb-2">
+                                        <!-- Star rating -->
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                    <div x-data="{ count: 0 }"
+                                        class="input-group d-flex tomboljumlah justify-content-center">
+                                        <span class="input-group-text bg-warning">Jumlah</span>
+                                        <button @click="count++" class="btn btn-outline-secondary"
+                                            type="button">+</button>
+                                        <input type="number" class="form-control text-center" :value="count">
+                                        <button @click="if (count > 0) count--" class="btn btn-outline-secondary"
+                                            type="button">-</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <!-- Menambahkan card lainnya di sini jika perlu -->
+    </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact pt-5 pb-5">
+        <div class="container  ">
+            <h2 class="text-center text-white"><span>Kontak</span> Kami</h2>
+            <p class="text-center text-white">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum ullam soluta
+                explicabo?</p>
+            <div class="row pt-5">
+                <div class="col-lg-6">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126480.11450516013!2d111.93378464015467!3d-7.842244023087992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78570dfd6e0647%3A0x25037b968333d9b2!2sKediri%2C%20Kabupaten%20Kediri%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1717591279215!5m2!1sid!2sid"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"
+                        style="width: 100%; height: 300px; border: 0;"></iframe>
+                </div>
+                <div class="col-lg-6">
+                    <form action="" class="">
+                        <div class="form-group">
+                            <label for="nama" class="text-white">Nama:</label>
+                            <input type="text" class="form-control" id="nama" placeholder="Masukkan nama Anda">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="text-white">E-mail:</label>
+                            <input type="email" class="form-control" id="email"
+                                placeholder="Masukkan alamat email Anda">
+                        </div>
+                        <div class="form-group">
+                            <label for="hp" class="text-white">No HP:</label>
+                            <input type="text" class="form-control" id="hp" placeholder="Masukkan nomor telepon Anda">
+                        </div>
+                        <button type="submit" class="btn btn-primary rounded-3 text-white">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-dark">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="paymentModalLabel">Form Pembayaran</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="paymentForm" class="row g-3 text-dark">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="nama" class="form-label">Nama</label>
+                                <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label for="alamat" class="form-label">Alamat</label>
+                                <textarea class="form-control" id="alamat" name="alamat" rows="3" placeholder="Alamat"
+                                    required></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="kategori" class="form-label">Kategori & Harga</label>
+                                <input type="text" class="form-control" id="kategori" name="kategori"
+                                    placeholder="Kategori" readonly>
+                                <!-- Placeholder untuk menampilkan kategori produk -->
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="jumlah" class="form-label">Jumlah</label>
+                                <input type="text" class="form-control" id="jumlah" name="jumlah" placeholder="Jumlah"
+                                    readonly>
+                                <!-- Placeholder untuk menampilkan jumlah produk yang dipilih -->
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="harga" class="form-label">Harga Satuan</label>
+                                <input type="text" class="form-control" id="harga" name="harga"
+                                    placeholder="Harga Satuan" readonly>
+                                <!-- Placeholder untuk menampilkan harga satuan produk -->
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="total" class="form-label">Total</label>
+                                <input type="text" class="form-control" id="total" name="total" placeholder="Total"
+                                    readonly>
+                                <!-- Placeholder untuk menampilkan total harga produk yang dipilih -->
+                            </div>
+                        </div>
+                        <div class="col-md-6 align-self-end">
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary w-100 rounded-3">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Your modal code here -->
+    <footer class="text-white">
+        <div class="container pt-4">
+            <div class="row  mx-auto justify-content-center">
+                <div class="">
+                    <div class="socials text-center pt-4">
+                        <a href="#"> <i data-feather="instagram"></i></a>
+                        <a href="#"> <i data-feather="twitter"></i></a>
+                        <a href="#"> <i data-feather="facebook"></i></a>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="links text-center">
+                        <a href="#home">Home</a>
+                        <a href="#about">Tentang Kami</a>
+                        <a href="#menu">Menu</a>
+                        <a href="#contact">Kontak</a>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="credit text-right text-center">
+                        <p>Created by <a href="#">KYY</a> | &copy; 2023</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer -->
+    <footer class="text-white">
+        <div class="container pt-4">
+            <!-- Footer content -->
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/src/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.0.6/dist/cdn.min.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js" async></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+        function goToIndex() {
+            window.location.href = "index.html";
+        }
+        feather.replace();
+    </script>
+</body>
+
+</html>
