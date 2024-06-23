@@ -205,17 +205,10 @@ body {
   margin: auto;
   /* Agar kontainer berada di tengah */
   padding: 20px;
-  background-color: #ca5405;
+  background-color: #ca0585;
   /* Padding untuk memberi ruang di dalam form */
 }
-@media (min-width: 769px) {
-  .card .card-body span {
-    width: auto;
-    height: 42px;
-    font-size: 0.9rem;
-    border-radius: 1rem 0 0 1rem;
-  }
-}
+
 
 /* Style untuk input email dan password */
 .form-container input[type="email"],
@@ -610,7 +603,7 @@ footer .credit a {
 
   .card-img-top {
     /* Menyesuaikan ukuran gambar pada kartu */
-    height: 200px;
+    height: 100px;
     /* Contoh penyesuaian tinggi gambar */
     object-fit: cover;
   }
